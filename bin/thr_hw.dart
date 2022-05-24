@@ -58,13 +58,13 @@ searchById({int? id}) {
 }
 
 deletById({int? Dl}) {
-  for (var std in Students) {
-    if (std["id"] == Dl) {
-      std.remove(Dl);
+  for (var i = 0; i < Students.length; i++) {
+    if (Students[i]["id"] == Dl) {
       print("You delete :");
       print("--------------------------------------------------------");
-      print(std);
+      print(Students[i]);
       print("--------------------------------------------------------");
+      Students.removeAt(i);
     }
   }
 }
